@@ -1,0 +1,87 @@
+LABEL start
+MouseAndKeyboard.MoveMouseToTextOnScreenWithOCR.WaitForTextToAppearAndClickTextOnSubregionOfScreenWithWindowsOcr TextToFind: 17.3 IsRegEx: False WindowsOcrLanguage: MouseAndKeyboard.WindowsOcrLanguage.English Occurence: 1 SearchForTextOn: MouseAndKeyboard.SearchTarget.EntireScreen ImageWidthMultiplier: 1 ImageHeightMultiplier: 1 X1: 592 Y1: 467 X2: 1574 Y2: 976 MovementStyle: MouseAndKeyboard.MovementStyle.Instant Timeout: 5 ClickType: MouseAndKeyboard.ClickType.LeftClick SecondsBeforeClicking: 0 PositionRelativeToText: MouseAndKeyboard.PositionOnImage.MiddleCenter OffsetX: 0 OffsetY: 0 X=> LocationOfTextFoundX Y=> LocationOfTextFoundY Width=> WidthOfTextFound Height=> HeightOfTextFound
+ON ERROR REPEAT 2 TIMES WAIT 1
+END
+MouseAndKeyboard.MoveMouseToTextOnScreenWithOCR.WaitForTextToAppearAndMoveMouseToTextOnScreenWithWindowsOcr TextToFind: $'''New in Safari''' IsRegEx: False WindowsOcrLanguage: MouseAndKeyboard.WindowsOcrLanguage.English Occurence: 1 SearchForTextOn: MouseAndKeyboard.SearchTarget.EntireScreen ImageWidthMultiplier: 1 ImageHeightMultiplier: 1 MovementStyle: MouseAndKeyboard.MovementStyle.Instant Timeout: 5 PositionRelativeToText: MouseAndKeyboard.PositionOnImage.MiddleCenter OffsetX: 0 OffsetY: 0 X=> LocationOfTextFoundX2 Y=> LocationOfTextFoundY2 Width=> WidthOfTextFound2 Height=> HeightOfTextFound2
+ON ERROR
+    REPEAT ACTION
+END
+Clipboard.SetText Text: $'''https://outlook.com'''
+Clipboard.GetText Text=> ClipboardText
+MouseAndKeyboard.SendKeys.FocusAndSendKeys TextToSend: $'''{Control}({v})''' DelayBetweenKeystrokes: 10 SendTextAsHardwareKeys: True
+MouseAndKeyboard.SendKeys.FocusAndSendKeys TextToSend: $'''{Back}{Back}{Back}{Back}{Back}{Back}{Back}{Back}{Back}{Back}{Back}{Back}{Back}{Back}{Back}{Back}{Back}{Back}{Back}''' DelayBetweenKeystrokes: 10 SendTextAsHardwareKeys: True
+**REGION account creation
+LABEL 'create account'
+MouseAndKeyboard.MoveMouseToTextOnScreenWithOCR.WaitForTextToAppearAndClickTextOnScreenWithWindowsOcr TextToFind: $'''Create free account''' IsRegEx: False WindowsOcrLanguage: MouseAndKeyboard.WindowsOcrLanguage.English Occurence: 1 SearchForTextOn: MouseAndKeyboard.SearchTarget.EntireScreen ImageWidthMultiplier: 1 ImageHeightMultiplier: 1 MovementStyle: MouseAndKeyboard.MovementStyle.Instant Timeout: 5 ClickType: MouseAndKeyboard.ClickType.LeftClick SecondsBeforeClicking: 0 PositionRelativeToText: MouseAndKeyboard.PositionOnImage.MiddleCenter OffsetX: 0 OffsetY: 0 X=> LocationOfTextFoundX3 Y=> LocationOfTextFoundY3 Width=> WidthOfTextFound3 Height=> HeightOfTextFound3
+ON ERROR REPEAT 3 TIMES WAIT 1
+END
+MouseAndKeyboard.MoveMouseToTextOnScreenWithOCR.WaitForTextToAppearAndClickTextOnScreenWithWindowsOcr TextToFind: $'''New email''' IsRegEx: False WindowsOcrLanguage: MouseAndKeyboard.WindowsOcrLanguage.English Occurence: 1 SearchForTextOn: MouseAndKeyboard.SearchTarget.EntireScreen ImageWidthMultiplier: 1 ImageHeightMultiplier: 1 MovementStyle: MouseAndKeyboard.MovementStyle.Instant Timeout: 1 ClickType: MouseAndKeyboard.ClickType.LeftClick SecondsBeforeClicking: 0 PositionRelativeToText: MouseAndKeyboard.PositionOnImage.MiddleCenter OffsetX: 0 OffsetY: 0 X=> LocationOfTextFoundX4 Y=> LocationOfTextFoundY4 Width=> WidthOfTextFound4 Height=> HeightOfTextFound4
+ON ERROR REPEAT 2 TIMES WAIT 1
+ON ERROR
+    GOTO 'create account'
+END
+Text.Random UseUpperCaseLetters: False UseLowerCaseLetters: True UseDigits: True UseSymbols: False MinimumLength: 4 MaximumLength: 6 RandomText=> RandomText
+MouseAndKeyboard.SendKeys.FocusAndSendKeys TextToSend: $'''harryzayn%RandomText%
+''' DelayBetweenKeystrokes: 0 SendTextAsHardwareKeys: True
+MouseAndKeyboard.MoveMouseToTextOnScreenWithOCR.WaitForTextToAppearAndClickTextOnScreenWithWindowsOcr TextToFind: $'''Create password''' IsRegEx: False WindowsOcrLanguage: MouseAndKeyboard.WindowsOcrLanguage.English Occurence: 1 SearchForTextOn: MouseAndKeyboard.SearchTarget.EntireScreen ImageWidthMultiplier: 1 ImageHeightMultiplier: 1 MovementStyle: MouseAndKeyboard.MovementStyle.Instant Timeout: 2 ClickType: MouseAndKeyboard.ClickType.LeftClick SecondsBeforeClicking: 0 PositionRelativeToText: MouseAndKeyboard.PositionOnImage.MiddleCenter OffsetX: 0 OffsetY: 0 X=> LocationOfTextFoundX5 Y=> LocationOfTextFoundY5 Width=> WidthOfTextFound5 Height=> HeightOfTextFound5
+ON ERROR REPEAT 3 TIMES WAIT 1
+END
+MouseAndKeyboard.SendKeys.FocusAndSendKeys TextToSend: $'''Andrerussell12@
+''' DelayBetweenKeystrokes: 0 SendTextAsHardwareKeys: True
+MouseAndKeyboard.MoveMouseToTextOnScreenWithOCR.WaitForTextToAppearAndClickTextOnScreenWithWindowsOcr TextToFind: $'''First name''' IsRegEx: False WindowsOcrLanguage: MouseAndKeyboard.WindowsOcrLanguage.English Occurence: 1 SearchForTextOn: MouseAndKeyboard.SearchTarget.EntireScreen ImageWidthMultiplier: 1 ImageHeightMultiplier: 1 MovementStyle: MouseAndKeyboard.MovementStyle.Instant Timeout: 2 ClickType: MouseAndKeyboard.ClickType.LeftClick SecondsBeforeClicking: 0 PositionRelativeToText: MouseAndKeyboard.PositionOnImage.MiddleCenter OffsetX: 0 OffsetY: 0 X=> LocationOfTextFoundX5 Y=> LocationOfTextFoundY5 Width=> WidthOfTextFound5 Height=> HeightOfTextFound5
+ON ERROR REPEAT 3 TIMES WAIT 1
+END
+MouseAndKeyboard.SendKeys.FocusAndSendKeys TextToSend: $'''harry
+''' DelayBetweenKeystrokes: 0 SendTextAsHardwareKeys: True
+MouseAndKeyboard.SendKeys.FocusAndSendKeys TextToSend: $'''zayn
+''' DelayBetweenKeystrokes: 0 SendTextAsHardwareKeys: True
+MouseAndKeyboard.MoveMouseToTextOnScreenWithOCR.WaitForTextToAppearAndMoveMouseToTextOnScreenWithWindowsOcr TextToFind: $'''What\'s your birthdate?''' IsRegEx: False WindowsOcrLanguage: MouseAndKeyboard.WindowsOcrLanguage.English Occurence: 1 SearchForTextOn: MouseAndKeyboard.SearchTarget.EntireScreen ImageWidthMultiplier: 1 ImageHeightMultiplier: 1 MovementStyle: MouseAndKeyboard.MovementStyle.Instant Timeout: 1 PositionRelativeToText: MouseAndKeyboard.PositionOnImage.MiddleCenter OffsetX: 0 OffsetY: 0 X=> LocationOfTextFoundX6 Y=> LocationOfTextFoundY6 Width=> WidthOfTextFound6 Height=> HeightOfTextFound6
+ON ERROR REPEAT 2 TIMES WAIT 1
+END
+MouseAndKeyboard.MoveMouseToTextOnScreenWithOCR.WaitForTextToAppearAndClickTextOnScreenWithWindowsOcr TextToFind: $'''Month''' IsRegEx: False WindowsOcrLanguage: MouseAndKeyboard.WindowsOcrLanguage.English Occurence: 1 SearchForTextOn: MouseAndKeyboard.SearchTarget.EntireScreen ImageWidthMultiplier: 1 ImageHeightMultiplier: 1 MovementStyle: MouseAndKeyboard.MovementStyle.Instant Timeout: 1 ClickType: MouseAndKeyboard.ClickType.LeftClick SecondsBeforeClicking: 0 PositionRelativeToText: MouseAndKeyboard.PositionOnImage.MiddleCenter OffsetX: 0 OffsetY: 0 X=> LocationOfTextFoundX6 Y=> LocationOfTextFoundY6 Width=> WidthOfTextFound6 Height=> HeightOfTextFound6
+ON ERROR REPEAT 2 TIMES WAIT 1
+END
+MouseAndKeyboard.SendKeys.FocusAndSendKeys TextToSend: $'''Jan{Return}
+''' DelayBetweenKeystrokes: 0 SendTextAsHardwareKeys: True
+Variables.GenerateRandomNumber.RandomNumber MinimumValue: 1965 MaximumValue: 2002 RandomNumber=> RandomNumber
+Variables.GenerateRandomNumber.RandomNumber MinimumValue: 2 MaximumValue: 28 RandomNumber=> RandomNumber2
+WAIT 1
+MouseAndKeyboard.MoveMouseToTextOnScreenWithOCR.WaitForTextToAppearAndClickTextOnScreenWithWindowsOcr TextToFind: $'''Day''' IsRegEx: False WindowsOcrLanguage: MouseAndKeyboard.WindowsOcrLanguage.English Occurence: 1 SearchForTextOn: MouseAndKeyboard.SearchTarget.EntireScreen ImageWidthMultiplier: 1 ImageHeightMultiplier: 1 MovementStyle: MouseAndKeyboard.MovementStyle.Instant Timeout: 1 ClickType: MouseAndKeyboard.ClickType.LeftClick SecondsBeforeClicking: 0 PositionRelativeToText: MouseAndKeyboard.PositionOnImage.MiddleCenter OffsetX: 0 OffsetY: 0 X=> LocationOfTextFoundX6 Y=> LocationOfTextFoundY6 Width=> WidthOfTextFound6 Height=> HeightOfTextFound6
+ON ERROR REPEAT 2 TIMES WAIT 1
+END
+MouseAndKeyboard.SendKeys.FocusAndSendKeys TextToSend: $'''%RandomNumber2%{Return}''' DelayBetweenKeystrokes: 0 SendTextAsHardwareKeys: True
+WAIT 1
+MouseAndKeyboard.MoveMouseToTextOnScreenWithOCR.WaitForTextToAppearAndClickTextOnScreenWithWindowsOcr TextToFind: $'''Year''' IsRegEx: False WindowsOcrLanguage: MouseAndKeyboard.WindowsOcrLanguage.English Occurence: 1 SearchForTextOn: MouseAndKeyboard.SearchTarget.EntireScreen ImageWidthMultiplier: 1 ImageHeightMultiplier: 1 MovementStyle: MouseAndKeyboard.MovementStyle.Instant Timeout: 1 ClickType: MouseAndKeyboard.ClickType.LeftClick SecondsBeforeClicking: 1 PositionRelativeToText: MouseAndKeyboard.PositionOnImage.MiddleCenter OffsetX: 0 OffsetY: 0 X=> LocationOfTextFoundX6 Y=> LocationOfTextFoundY6 Width=> WidthOfTextFound6 Height=> HeightOfTextFound6
+ON ERROR REPEAT 2 TIMES WAIT 1
+END
+MouseAndKeyboard.SendKeys.FocusAndSendKeys TextToSend: $'''%RandomNumber%{Return}''' DelayBetweenKeystrokes: 0 SendTextAsHardwareKeys: True
+**ENDREGION
+**REGION captcha and futher process
+MouseAndKeyboard.MoveMouseToTextOnScreenWithOCR.WaitForTextToAppearAndClickTextOnScreenWithWindowsOcr TextToFind: $'''Create account''' IsRegEx: False WindowsOcrLanguage: MouseAndKeyboard.WindowsOcrLanguage.English Occurence: 1 SearchForTextOn: MouseAndKeyboard.SearchTarget.EntireScreen ImageWidthMultiplier: 1 ImageHeightMultiplier: 1 MovementStyle: MouseAndKeyboard.MovementStyle.Instant Timeout: 1 ClickType: MouseAndKeyboard.ClickType.LeftClick SecondsBeforeClicking: 0 PositionRelativeToText: MouseAndKeyboard.PositionOnImage.MiddleCenter OffsetX: 0 OffsetY: 0 X=> LocationOfTextFoundX7 Y=> LocationOfTextFoundY7 Width=> WidthOfTextFound7 Height=> HeightOfTextFound7
+ON ERROR REPEAT 5 TIMES WAIT 1
+END
+MouseAndKeyboard.SendKeys.FocusAndSendKeys TextToSend: $'''{Down}{Down}{Down}{Down}''' DelayBetweenKeystrokes: 0 SendTextAsHardwareKeys: True
+WAIT 1
+MouseAndKeyboard.MoveMouseToTextOnScreenWithOCR.WaitForTextToAppearAndClickTextOnScreenWithWindowsOcr TextToFind: $'''Next''' IsRegEx: False WindowsOcrLanguage: MouseAndKeyboard.WindowsOcrLanguage.English Occurence: 1 SearchForTextOn: MouseAndKeyboard.SearchTarget.EntireScreen ImageWidthMultiplier: 1 ImageHeightMultiplier: 1 MovementStyle: MouseAndKeyboard.MovementStyle.Instant Timeout: 1 ClickType: MouseAndKeyboard.ClickType.LeftClick SecondsBeforeClicking: 0 PositionRelativeToText: MouseAndKeyboard.PositionOnImage.MiddleCenter OffsetX: 0 OffsetY: 0 X=> LocationOfTextFoundX8 Y=> LocationOfTextFoundY8 Width=> WidthOfTextFound8 Height=> HeightOfTextFound8
+ON ERROR REPEAT 2 TIMES WAIT 1
+END
+**ENDREGION
+**REGION final
+MouseAndKeyboard.MoveMouseToTextOnScreenWithOCR.WaitForTextToAppearAndClickTextOnScreenWithWindowsOcr TextToFind: $'''Not Now''' IsRegEx: False WindowsOcrLanguage: MouseAndKeyboard.WindowsOcrLanguage.English Occurence: 1 SearchForTextOn: MouseAndKeyboard.SearchTarget.EntireScreen ImageWidthMultiplier: 1 ImageHeightMultiplier: 1 MovementStyle: MouseAndKeyboard.MovementStyle.Instant Timeout: 1 ClickType: MouseAndKeyboard.ClickType.LeftClick SecondsBeforeClicking: 0 PositionRelativeToText: MouseAndKeyboard.PositionOnImage.MiddleCenter OffsetX: 0 OffsetY: 0 X=> LocationOfTextFoundX9 Y=> LocationOfTextFoundY9 Width=> WidthOfTextFound9 Height=> HeightOfTextFound9
+ON ERROR
+    REPEAT ACTION
+END
+MouseAndKeyboard.MoveMouseToTextOnScreenWithOCR.WaitForTextToAppearAndClickTextOnScreenWithWindowsOcr TextToFind: $'''Don\'t show this again''' IsRegEx: False WindowsOcrLanguage: MouseAndKeyboard.WindowsOcrLanguage.English Occurence: 1 SearchForTextOn: MouseAndKeyboard.SearchTarget.EntireScreen ImageWidthMultiplier: 1 ImageHeightMultiplier: 1 MovementStyle: MouseAndKeyboard.MovementStyle.Instant Timeout: 1 ClickType: MouseAndKeyboard.ClickType.LeftClick SecondsBeforeClicking: 0 PositionRelativeToText: MouseAndKeyboard.PositionOnImage.MiddleCenter OffsetX: 0 OffsetY: 0 X=> LocationOfTextFoundX10 Y=> LocationOfTextFoundY10 Width=> WidthOfTextFound10 Height=> HeightOfTextFound10
+ON ERROR REPEAT 2 TIMES WAIT 1
+END
+MouseAndKeyboard.MoveMouseToTextOnScreenWithOCR.WaitForTextToAppearAndClickTextOnScreenWithWindowsOcr TextToFind: $'''Yes''' IsRegEx: False WindowsOcrLanguage: MouseAndKeyboard.WindowsOcrLanguage.English Occurence: 1 SearchForTextOn: MouseAndKeyboard.SearchTarget.EntireScreen ImageWidthMultiplier: 1 ImageHeightMultiplier: 1 MovementStyle: MouseAndKeyboard.MovementStyle.Instant Timeout: 1 ClickType: MouseAndKeyboard.ClickType.LeftClick SecondsBeforeClicking: 0 PositionRelativeToText: MouseAndKeyboard.PositionOnImage.MiddleCenter OffsetX: 0 OffsetY: 0 X=> LocationOfTextFoundX10 Y=> LocationOfTextFoundY10 Width=> WidthOfTextFound10 Height=> HeightOfTextFound10
+ON ERROR REPEAT 2 TIMES WAIT 1
+END
+**ENDREGION
+**REGION account file 
+File.WriteText File: $'''C:\\Users\\aryan\\OneDrive\\Desktop\\accounts.txt''' TextToWrite: $'''harryzayn%RandomText%@outlook.com''' AppendNewLine: True IfFileExists: File.IfFileExists.Append Encoding: File.FileEncoding.Unicode
+MouseAndKeyboard.MoveMouseToTextOnScreenWithOCR.WaitForTextToAppearAndClickTextOnScreenWithWindowsOcr TextToFind: $'''Stop Session''' IsRegEx: False WindowsOcrLanguage: MouseAndKeyboard.WindowsOcrLanguage.English Occurence: 1 SearchForTextOn: MouseAndKeyboard.SearchTarget.EntireScreen ImageWidthMultiplier: 1 ImageHeightMultiplier: 1 MovementStyle: MouseAndKeyboard.MovementStyle.Instant Timeout: 1 ClickType: MouseAndKeyboard.ClickType.LeftClick SecondsBeforeClicking: 0 PositionRelativeToText: MouseAndKeyboard.PositionOnImage.MiddleCenter OffsetX: 0 OffsetY: 0 X=> LocationOfTextFoundX11 Y=> LocationOfTextFoundY11 Width=> WidthOfTextFound11 Height=> HeightOfTextFound11
+ON ERROR REPEAT 2 TIMES WAIT 1
+END
+**ENDREGION
+GOTO start
