@@ -1,15 +1,13 @@
 LABEL start
-MouseAndKeyboard.MoveMouseToTextOnScreenWithOCR.WaitForTextToAppearAndClickTextOnSubregionOfScreenWithWindowsOcr TextToFind: 17.3 IsRegEx: False WindowsOcrLanguage: MouseAndKeyboard.WindowsOcrLanguage.English Occurence: 1 SearchForTextOn: MouseAndKeyboard.SearchTarget.EntireScreen ImageWidthMultiplier: 1 ImageHeightMultiplier: 1 X1: 592 Y1: 467 X2: 1574 Y2: 976 MovementStyle: MouseAndKeyboard.MovementStyle.Instant Timeout: 5 ClickType: MouseAndKeyboard.ClickType.LeftClick SecondsBeforeClicking: 0 PositionRelativeToText: MouseAndKeyboard.PositionOnImage.MiddleCenter OffsetX: 0 OffsetY: 0 X=> LocationOfTextFoundX Y=> LocationOfTextFoundY Width=> WidthOfTextFound Height=> HeightOfTextFound
+MouseAndKeyboard.MoveMouseToTextOnScreenWithOCR.WaitForTextToAppearAndClickTextOnScreenWithWindowsOcr TextToFind: $'''17.3 Latest''' IsRegEx: False WindowsOcrLanguage: MouseAndKeyboard.WindowsOcrLanguage.English Occurence: 1 SearchForTextOn: MouseAndKeyboard.SearchTarget.EntireScreen ImageWidthMultiplier: 1 ImageHeightMultiplier: 1 MovementStyle: MouseAndKeyboard.MovementStyle.Instant Timeout: 5 ClickType: MouseAndKeyboard.ClickType.LeftClick SecondsBeforeClicking: 0 PositionRelativeToText: MouseAndKeyboard.PositionOnImage.MiddleCenter OffsetX: 0 OffsetY: 0 X=> LocationOfTextFoundX Y=> LocationOfTextFoundY Width=> WidthOfTextFound Height=> HeightOfTextFound
 ON ERROR REPEAT 2 TIMES WAIT 1
 END
 MouseAndKeyboard.MoveMouseToTextOnScreenWithOCR.WaitForTextToAppearAndMoveMouseToTextOnScreenWithWindowsOcr TextToFind: $'''New in Safari''' IsRegEx: False WindowsOcrLanguage: MouseAndKeyboard.WindowsOcrLanguage.English Occurence: 1 SearchForTextOn: MouseAndKeyboard.SearchTarget.EntireScreen ImageWidthMultiplier: 1 ImageHeightMultiplier: 1 MovementStyle: MouseAndKeyboard.MovementStyle.Instant Timeout: 5 PositionRelativeToText: MouseAndKeyboard.PositionOnImage.MiddleCenter OffsetX: 0 OffsetY: 0 X=> LocationOfTextFoundX2 Y=> LocationOfTextFoundY2 Width=> WidthOfTextFound2 Height=> HeightOfTextFound2
 ON ERROR
     REPEAT ACTION
 END
-Clipboard.SetText Text: $'''https://outlook.com'''
-Clipboard.GetText Text=> ClipboardText
-MouseAndKeyboard.SendKeys.FocusAndSendKeys TextToSend: $'''{Control}({v})''' DelayBetweenKeystrokes: 10 SendTextAsHardwareKeys: True
-MouseAndKeyboard.SendKeys.FocusAndSendKeys TextToSend: $'''{Back}{Back}{Back}{Back}{Back}{Back}{Back}{Back}{Back}{Back}{Back}{Back}{Back}{Back}{Back}{Back}{Back}{Back}{Back}''' DelayBetweenKeystrokes: 10 SendTextAsHardwareKeys: True
+MouseAndKeyboard.SendKeys.FocusAndSendKeys TextToSend: $'''https://outlook.com
+''' DelayBetweenKeystrokes: 150 SendTextAsHardwareKeys: True
 **REGION account creation
 LABEL 'create account'
 MouseAndKeyboard.MoveMouseToTextOnScreenWithOCR.WaitForTextToAppearAndClickTextOnScreenWithWindowsOcr TextToFind: $'''Create free account''' IsRegEx: False WindowsOcrLanguage: MouseAndKeyboard.WindowsOcrLanguage.English Occurence: 1 SearchForTextOn: MouseAndKeyboard.SearchTarget.EntireScreen ImageWidthMultiplier: 1 ImageHeightMultiplier: 1 MovementStyle: MouseAndKeyboard.MovementStyle.Instant Timeout: 5 ClickType: MouseAndKeyboard.ClickType.LeftClick SecondsBeforeClicking: 0 PositionRelativeToText: MouseAndKeyboard.PositionOnImage.MiddleCenter OffsetX: 0 OffsetY: 0 X=> LocationOfTextFoundX3 Y=> LocationOfTextFoundY3 Width=> WidthOfTextFound3 Height=> HeightOfTextFound3
@@ -22,12 +20,13 @@ ON ERROR
 END
 Text.Random UseUpperCaseLetters: False UseLowerCaseLetters: True UseDigits: True UseSymbols: False MinimumLength: 4 MaximumLength: 6 RandomText=> RandomText
 MouseAndKeyboard.SendKeys.FocusAndSendKeys TextToSend: $'''harryzayn%RandomText%
-''' DelayBetweenKeystrokes: 0 SendTextAsHardwareKeys: True
+''' DelayBetweenKeystrokes: 200 SendTextAsHardwareKeys: True
 MouseAndKeyboard.MoveMouseToTextOnScreenWithOCR.WaitForTextToAppearAndClickTextOnScreenWithWindowsOcr TextToFind: $'''Create password''' IsRegEx: False WindowsOcrLanguage: MouseAndKeyboard.WindowsOcrLanguage.English Occurence: 1 SearchForTextOn: MouseAndKeyboard.SearchTarget.EntireScreen ImageWidthMultiplier: 1 ImageHeightMultiplier: 1 MovementStyle: MouseAndKeyboard.MovementStyle.Instant Timeout: 2 ClickType: MouseAndKeyboard.ClickType.LeftClick SecondsBeforeClicking: 0 PositionRelativeToText: MouseAndKeyboard.PositionOnImage.MiddleCenter OffsetX: 0 OffsetY: 0 X=> LocationOfTextFoundX5 Y=> LocationOfTextFoundY5 Width=> WidthOfTextFound5 Height=> HeightOfTextFound5
 ON ERROR REPEAT 3 TIMES WAIT 1
 END
-MouseAndKeyboard.SendKeys.FocusAndSendKeys TextToSend: $'''Andrerussell12@
-''' DelayBetweenKeystrokes: 0 SendTextAsHardwareKeys: True
+MouseAndKeyboard.SendKeys.FocusAndSendKeys TextToSend: P'AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAADUZWXH+SH0ukt/yxiGWvFQQAAAACAAAAAAAQZgAAAAEAACAAAACG2p5vVcvocswd8PpYQBoe/IzC4FNWXeXNwqLWppCeVQAAAAAOgAAAAAIAACAAAACB6smc8Zi7+CCXqC+aVCedHubEpkHo1n5R4s/fsPUhzCAAAAAqQQRSVr58L0nqjtv3gmVWWzMzJ/KIEYyGDeS4zqruZkAAAAD4F3scb6Rl0M2jJsY868sy/J86Ym42Hi07EFvx+fkB3UERneSDKjmBYLqxhILyPG5SXvUWJ3A5Wa5WXXr57vvO' DelayBetweenKeystrokes: 200 SendTextAsHardwareKeys: True
+WAIT 1
+MouseAndKeyboard.SendKeys.FocusAndSendKeys TextToSend: $'''{Return}''' DelayBetweenKeystrokes: 100 SendTextAsHardwareKeys: True
 MouseAndKeyboard.MoveMouseToTextOnScreenWithOCR.WaitForTextToAppearAndClickTextOnScreenWithWindowsOcr TextToFind: $'''First name''' IsRegEx: False WindowsOcrLanguage: MouseAndKeyboard.WindowsOcrLanguage.English Occurence: 1 SearchForTextOn: MouseAndKeyboard.SearchTarget.EntireScreen ImageWidthMultiplier: 1 ImageHeightMultiplier: 1 MovementStyle: MouseAndKeyboard.MovementStyle.Instant Timeout: 2 ClickType: MouseAndKeyboard.ClickType.LeftClick SecondsBeforeClicking: 0 PositionRelativeToText: MouseAndKeyboard.PositionOnImage.MiddleCenter OffsetX: 0 OffsetY: 0 X=> LocationOfTextFoundX5 Y=> LocationOfTextFoundY5 Width=> WidthOfTextFound5 Height=> HeightOfTextFound5
 ON ERROR REPEAT 3 TIMES WAIT 1
 END
@@ -45,8 +44,7 @@ MouseAndKeyboard.SendKeys.FocusAndSendKeys TextToSend: $'''Jan{Return}
 ''' DelayBetweenKeystrokes: 0 SendTextAsHardwareKeys: True
 Variables.GenerateRandomNumber.RandomNumber MinimumValue: 1965 MaximumValue: 2002 RandomNumber=> RandomNumber
 Variables.GenerateRandomNumber.RandomNumber MinimumValue: 2 MaximumValue: 28 RandomNumber=> RandomNumber2
-WAIT 1
-MouseAndKeyboard.MoveMouseToTextOnScreenWithOCR.WaitForTextToAppearAndClickTextOnScreenWithWindowsOcr TextToFind: $'''Day''' IsRegEx: False WindowsOcrLanguage: MouseAndKeyboard.WindowsOcrLanguage.English Occurence: 1 SearchForTextOn: MouseAndKeyboard.SearchTarget.EntireScreen ImageWidthMultiplier: 1 ImageHeightMultiplier: 1 MovementStyle: MouseAndKeyboard.MovementStyle.Instant Timeout: 1 ClickType: MouseAndKeyboard.ClickType.LeftClick SecondsBeforeClicking: 0 PositionRelativeToText: MouseAndKeyboard.PositionOnImage.MiddleCenter OffsetX: 0 OffsetY: 0 X=> LocationOfTextFoundX6 Y=> LocationOfTextFoundY6 Width=> WidthOfTextFound6 Height=> HeightOfTextFound6
+MouseAndKeyboard.MoveMouseToImage.ClickImage Images: [imgrepo['day']] SearchForImageOn: MouseAndKeyboard.SearchTarget.EntireScreen MousePositionOnImage: MouseAndKeyboard.PositionOnImage.MiddleCenter OffsetX: 0 OffsetY: 0 Tolerance: 10 MovementStyle: MouseAndKeyboard.MovementStyle.Instant Occurence: 1 Timeout: 5 ClickType: MouseAndKeyboard.ClickType.LeftClick SecondsBeforeClick: 0 SearchAlgorithm: MouseAndKeyboard.ImageFinderAlgorithm.Template X=> X Y=> Y
 ON ERROR REPEAT 2 TIMES WAIT 1
 END
 MouseAndKeyboard.SendKeys.FocusAndSendKeys TextToSend: $'''%RandomNumber2%{Return}''' DelayBetweenKeystrokes: 0 SendTextAsHardwareKeys: True
@@ -60,7 +58,7 @@ MouseAndKeyboard.SendKeys.FocusAndSendKeys TextToSend: $'''%RandomNumber%{Return
 MouseAndKeyboard.MoveMouseToTextOnScreenWithOCR.WaitForTextToAppearAndClickTextOnScreenWithWindowsOcr TextToFind: $'''Create account''' IsRegEx: False WindowsOcrLanguage: MouseAndKeyboard.WindowsOcrLanguage.English Occurence: 1 SearchForTextOn: MouseAndKeyboard.SearchTarget.EntireScreen ImageWidthMultiplier: 1 ImageHeightMultiplier: 1 MovementStyle: MouseAndKeyboard.MovementStyle.Instant Timeout: 1 ClickType: MouseAndKeyboard.ClickType.LeftClick SecondsBeforeClicking: 0 PositionRelativeToText: MouseAndKeyboard.PositionOnImage.MiddleCenter OffsetX: 0 OffsetY: 0 X=> LocationOfTextFoundX7 Y=> LocationOfTextFoundY7 Width=> WidthOfTextFound7 Height=> HeightOfTextFound7
 ON ERROR REPEAT 5 TIMES WAIT 1
 END
-MouseAndKeyboard.SendKeys.FocusAndSendKeys TextToSend: $'''{Down}{Down}{Down}{Down}''' DelayBetweenKeystrokes: 0 SendTextAsHardwareKeys: True
+MouseAndKeyboard.SendKeys.FocusAndSendKeys TextToSend: $'''{Down}{Down}{Down}{Down}''' DelayBetweenKeystrokes: 40 SendTextAsHardwareKeys: True
 WAIT 1
 MouseAndKeyboard.MoveMouseToTextOnScreenWithOCR.WaitForTextToAppearAndClickTextOnScreenWithWindowsOcr TextToFind: $'''Next''' IsRegEx: False WindowsOcrLanguage: MouseAndKeyboard.WindowsOcrLanguage.English Occurence: 1 SearchForTextOn: MouseAndKeyboard.SearchTarget.EntireScreen ImageWidthMultiplier: 1 ImageHeightMultiplier: 1 MovementStyle: MouseAndKeyboard.MovementStyle.Instant Timeout: 1 ClickType: MouseAndKeyboard.ClickType.LeftClick SecondsBeforeClicking: 0 PositionRelativeToText: MouseAndKeyboard.PositionOnImage.MiddleCenter OffsetX: 0 OffsetY: 0 X=> LocationOfTextFoundX8 Y=> LocationOfTextFoundY8 Width=> WidthOfTextFound8 Height=> HeightOfTextFound8
 ON ERROR REPEAT 2 TIMES WAIT 1
@@ -79,9 +77,21 @@ ON ERROR REPEAT 2 TIMES WAIT 1
 END
 **ENDREGION
 **REGION account file 
-File.WriteText File: $'''C:\\Users\\aryan\\OneDrive\\Desktop\\accounts.txt''' TextToWrite: $'''harryzayn%RandomText%@outlook.com''' AppendNewLine: True IfFileExists: File.IfFileExists.Append Encoding: File.FileEncoding.Unicode
+File.WriteText File: $'''C:\\Users\\amann\\OneDrive\\Desktop\\accounts.txt''' TextToWrite: $'''harryzayn%RandomText%@outlook.com''' AppendNewLine: True IfFileExists: File.IfFileExists.Append Encoding: File.FileEncoding.Unicode
 MouseAndKeyboard.MoveMouseToTextOnScreenWithOCR.WaitForTextToAppearAndClickTextOnScreenWithWindowsOcr TextToFind: $'''Stop Session''' IsRegEx: False WindowsOcrLanguage: MouseAndKeyboard.WindowsOcrLanguage.English Occurence: 1 SearchForTextOn: MouseAndKeyboard.SearchTarget.EntireScreen ImageWidthMultiplier: 1 ImageHeightMultiplier: 1 MovementStyle: MouseAndKeyboard.MovementStyle.Instant Timeout: 1 ClickType: MouseAndKeyboard.ClickType.LeftClick SecondsBeforeClicking: 0 PositionRelativeToText: MouseAndKeyboard.PositionOnImage.MiddleCenter OffsetX: 0 OffsetY: 0 X=> LocationOfTextFoundX11 Y=> LocationOfTextFoundY11 Width=> WidthOfTextFound11 Height=> HeightOfTextFound11
 ON ERROR REPEAT 2 TIMES WAIT 1
 END
 **ENDREGION
 GOTO start
+
+# [ControlRepository][PowerAutomateDesktop]
+
+{
+  "ControlRepositorySymbols": [],
+  "ImageRepositorySymbol": {
+    "Repository": "{\r\n  \"Folders\": [],\r\n  \"Images\": [\r\n    {\r\n      \"Id\": \"3f60d6e5-299f-46fb-a3de-eaf89add14fa\",\r\n      \"Name\": \"day\",\r\n      \"Screenshot\": \"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\",\r\n      \"ScreenshotPath\": \"imageRepo-screenshots\\\\ac274032-cc7c-4227-9ff7-73d133bd4d00.png\"\r\n    }\r\n  ],\r\n  \"Version\": 1\r\n}",
+    "ImportMetadata": {},
+    "Name": "imgrepo"
+  },
+  "ConnectionReferences": []
+}
