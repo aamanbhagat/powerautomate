@@ -1,0 +1,20 @@
+MouseAndKeyboard.MoveMouseToTextOnScreenWithOCR.WaitForTextToAppearAndClickTextOnScreenWithWindowsOcr TextToFind: $'''Turn on an ad privacy feature''' IsRegEx: False WindowsOcrLanguage: MouseAndKeyboard.WindowsOcrLanguage.English Occurence: 1 SearchForTextOn: MouseAndKeyboard.SearchTarget.EntireScreen ImageWidthMultiplier: 1 ImageHeightMultiplier: 1 MovementStyle: MouseAndKeyboard.MovementStyle.Instant Timeout: 5 ClickType: MouseAndKeyboard.ClickType.LeftClick SecondsBeforeClicking: 1 PositionRelativeToText: MouseAndKeyboard.PositionOnImage.MiddleCenter OffsetX: 0 OffsetY: 0 X=> LocationOfTextFoundX Y=> LocationOfTextFoundY Width=> WidthOfTextFound Height=> HeightOfTextFound
+    ON ERROR
+        REPEAT ACTION
+    END
+MouseAndKeyboard.SendKeys.FocusAndSendKeys TextToSend: $'''{Down}{Down}{Down}{Down}{Down}{Down}{Down}{Down}{Down}''' DelayBetweenKeystrokes: 0 SendTextAsHardwareKeys: True
+MouseAndKeyboard.MoveMouseToTextOnScreenWithOCR.WaitForTextToAppearAndClickTextOnScreenWithWindowsOcr TextToFind: $'''Turn it on''' IsRegEx: False WindowsOcrLanguage: MouseAndKeyboard.WindowsOcrLanguage.English Occurence: 1 SearchForTextOn: MouseAndKeyboard.SearchTarget.EntireScreen ImageWidthMultiplier: 1 ImageHeightMultiplier: 1 MovementStyle: MouseAndKeyboard.MovementStyle.Instant Timeout: 5 ClickType: MouseAndKeyboard.ClickType.LeftClick SecondsBeforeClicking: 1 PositionRelativeToText: MouseAndKeyboard.PositionOnImage.MiddleCenter OffsetX: 0 OffsetY: 0 X=> LocationOfTextFoundX Y=> LocationOfTextFoundY Width=> WidthOfTextFound Height=> HeightOfTextFound
+    ON ERROR
+        REPEAT ACTION
+    END
+MouseAndKeyboard.MoveMouseToTextOnScreenWithOCR.WaitForTextToAppearAndClickTextOnScreenWithWindowsOcr TextToFind: $'''Other ad privacy features now available''' IsRegEx: False WindowsOcrLanguage: MouseAndKeyboard.WindowsOcrLanguage.English Occurence: 1 SearchForTextOn: MouseAndKeyboard.SearchTarget.EntireScreen ImageWidthMultiplier: 1 ImageHeightMultiplier: 1 MovementStyle: MouseAndKeyboard.MovementStyle.Instant Timeout: 5 ClickType: MouseAndKeyboard.ClickType.LeftClick SecondsBeforeClicking: 1 PositionRelativeToText: MouseAndKeyboard.PositionOnImage.MiddleCenter OffsetX: 0 OffsetY: 0 X=> LocationOfTextFoundX Y=> LocationOfTextFoundY Width=> WidthOfTextFound Height=> HeightOfTextFound
+    ON ERROR
+        REPEAT ACTION
+    END
+MouseAndKeyboard.SendKeys.FocusAndSendKeys TextToSend: $'''{Down}{Down}{Down}{Down}{Down}{Down}{Down}{Down}{Down}''' DelayBetweenKeystrokes: 0 SendTextAsHardwareKeys: True
+MouseAndKeyboard.MoveMouseToTextOnScreenWithOCR.WaitForTextToAppearAndClickTextOnScreenWithWindowsOcr TextToFind: $'''Got it''' IsRegEx: False WindowsOcrLanguage: MouseAndKeyboard.WindowsOcrLanguage.English Occurence: 1 SearchForTextOn: MouseAndKeyboard.SearchTarget.EntireScreen ImageWidthMultiplier: 1 ImageHeightMultiplier: 1 MovementStyle: MouseAndKeyboard.MovementStyle.Instant Timeout: 5 ClickType: MouseAndKeyboard.ClickType.LeftClick SecondsBeforeClicking: 1 PositionRelativeToText: MouseAndKeyboard.PositionOnImage.MiddleCenter OffsetX: 0 OffsetY: 0 X=> LocationOfTextFoundX Y=> LocationOfTextFoundY Width=> WidthOfTextFound Height=> HeightOfTextFound
+    ON ERROR
+        REPEAT ACTION
+    END
+CALL 'sqrx load'
+EXIT FUNCTION

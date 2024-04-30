@@ -1,0 +1,18 @@
+MouseAndKeyboard.MoveMouseToTextOnScreenWithOCR.WaitForTextToAppearAndClickTextOnScreenWithWindowsOcr TextToFind: $'''Review permissions''' IsRegEx: False WindowsOcrLanguage: MouseAndKeyboard.WindowsOcrLanguage.English Occurence: 1 SearchForTextOn: MouseAndKeyboard.SearchTarget.EntireScreen ImageWidthMultiplier: 1 ImageHeightMultiplier: 1 MovementStyle: MouseAndKeyboard.MovementStyle.Instant Timeout: 5 ClickType: MouseAndKeyboard.ClickType.LeftClick SecondsBeforeClicking: 0 PositionRelativeToText: MouseAndKeyboard.PositionOnImage.MiddleCenter OffsetX: 0 OffsetY: 0 X=> LocationOfTextFoundX4 Y=> LocationOfTextFoundY4 Width=> WidthOfTextFound4 Height=> HeightOfTextFound4
+    ON ERROR
+        REPEAT ACTION
+    END
+MouseAndKeyboard.MoveMouseToTextOnScreenWithOCR.WaitForTextToAppearAndMoveMouseToTextOnScreenWithWindowsOcr TextToFind: $'''Permissions requested by:''' IsRegEx: False WindowsOcrLanguage: MouseAndKeyboard.WindowsOcrLanguage.English Occurence: 1 SearchForTextOn: MouseAndKeyboard.SearchTarget.EntireScreen ImageWidthMultiplier: 1 ImageHeightMultiplier: 1 MovementStyle: MouseAndKeyboard.MovementStyle.Instant Timeout: 5 PositionRelativeToText: MouseAndKeyboard.PositionOnImage.MiddleCenter OffsetX: 0 OffsetY: 0 X=> LocationOfTextFoundX4 Y=> LocationOfTextFoundY4 Width=> WidthOfTextFound4 Height=> HeightOfTextFound4
+    ON ERROR
+        REPEAT ACTION
+    END
+MouseAndKeyboard.SendKeys.FocusAndSendKeys TextToSend: $'''{Return}''' DelayBetweenKeystrokes: 0 SendTextAsHardwareKeys: True
+MouseAndKeyboard.MoveMouseToTextOnScreenWithOCR.WaitForTextToAppearAndClickTextOnScreenWithWindowsOcr TextToFind: $'''Exercise - Connect Azure Storage Explorer to a storage account''' IsRegEx: False WindowsOcrLanguage: MouseAndKeyboard.WindowsOcrLanguage.English Occurence: 1 SearchForTextOn: MouseAndKeyboard.SearchTarget.EntireScreen ImageWidthMultiplier: 1 ImageHeightMultiplier: 1 MovementStyle: MouseAndKeyboard.MovementStyle.Instant Timeout: 5 ClickType: MouseAndKeyboard.ClickType.LeftClick SecondsBeforeClicking: 1 PositionRelativeToText: MouseAndKeyboard.PositionOnImage.MiddleCenter OffsetX: 0 OffsetY: 0 X=> LocationOfTextFoundX4 Y=> LocationOfTextFoundY4 Width=> WidthOfTextFound4 Height=> HeightOfTextFound4
+    ON ERROR REPEAT 8 TIMES WAIT 1
+    END
+MouseAndKeyboard.SendKeys.FocusAndSendKeys TextToSend: $'''{Down}{Down}{Down}{Down}{Down}{Down}{Down}''' DelayBetweenKeystrokes: 0 SendTextAsHardwareKeys: True
+MouseAndKeyboard.MoveMouseToTextOnScreenWithOCR.WaitForTextToAppearAndMoveMouseToTextOnScreenWithWindowsOcr TextToFind: $'''Checking sandbox availability...''' IsRegEx: False WindowsOcrLanguage: MouseAndKeyboard.WindowsOcrLanguage.English Occurence: 1 SearchForTextOn: MouseAndKeyboard.SearchTarget.EntireScreen ImageWidthMultiplier: 1 ImageHeightMultiplier: 1 MovementStyle: MouseAndKeyboard.MovementStyle.Instant Timeout: 1 PositionRelativeToText: MouseAndKeyboard.PositionOnImage.MiddleCenter OffsetX: 0 OffsetY: 0 X=> LocationOfTextFoundX12 Y=> LocationOfTextFoundY12 Width=> WidthOfTextFound12 Height=> HeightOfTextFound12
+    ON ERROR
+        REPEAT ACTION
+    END
+EXIT FUNCTION
